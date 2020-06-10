@@ -1,0 +1,35 @@
+.full-article {
+  width: 80%;
+  height: 100vh;
+  margin: 30px auto;
+}
+
+.top-heading {
+  margin: 20px auto;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.article-meta {
+  margin: 20px auto;
+}
+
+.author {
+  font-weight: bold;
+}
+
+.full-article-image {
+  float: right;
+}
+
+.full-article-image img {
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
+  margin: 10px 10px;
+}
+
+.article-content {
+  line-height: 1.5rem;
+}
