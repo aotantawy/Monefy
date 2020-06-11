@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--news page-->
     <link rel="stylesheet" href="/stock/news-page/css/main-news.css">
+    <!--Trending-->
+    <link rel="stylesheet" href="/stock/trend/css/trending.css">
+
 
     <!-- Favicons -->
     <link href="/stock/assets/img/favicon.png" rel="icon">

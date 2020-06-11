@@ -12,8 +12,8 @@
                 <li class="drop-down"><a href="">Services</a>
                     <ul>
 
-                        <li><a href="localTrend.html">Local Trend</a></li>
-                        <li><a href="globalTrend.html">Global Trend </a></li>
+                        <li><a href="/stock/trend/index.php?type=local">Local Trend</a></li>
+                        <li><a href="/stock/trend/index.php?type=global">Global Trend </a></li>
                     </ul>
 
                 <li><a href="/stock/news-page/">News</a></li>
