@@ -12,8 +12,8 @@
                 <li class="drop-down"><a href="">Services</a>
                     <ul>
 
-                        <li><a href="localTrend.html">Local Trend</a></li>
-                        <li><a href="globalTrend.html">Global Trend </a></li>
+                        <li><a href="/stock/trend/index.php?type=local">Local Trend</a></li>
+                        <li><a href="/stock/trend/index.php?type=global">Global Trend </a></li>
                     </ul>
 
                 <li><a href="/stock/news-page/">News</a></li>
@@ -22,9 +22,8 @@
 
         </nav><!-- .nav-menu -->
         <div class="header-social-links">
-            <button type="button" onclick="location.href='login.html';" class="btn btn-outline-primary">log in</button>
-            <button type="button" class="btn btn-outline-primary" onclick="location.href='register.html';">sign
-                up</button>
+            <button type="button" onclick="location.href='/stock/register/login.php';" class="btn btn-outline-primary">log in</button>
+            <button type="button" class="btn btn-outline-primary" onclick="location.href='/stock/register/register.php';">sign up</button>
         </div>
     </div>
 </header><!-- End Header -->
