@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/stock/news-page/css/main-news.css">
     <!--Trending-->
     <link rel="stylesheet" href="/stock/trend/css/trending.css">
+    <!--company-->
+    <link rel="stylesheet" href="/stock/company/css/company-style.css">
 
 
     <!-- Favicons -->

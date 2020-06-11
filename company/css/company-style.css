@@ -1,0 +1,57 @@
+body {
+  background-color: #f5f5f5;
+}
+
+@media (min-width: 1000px) {
+  .page-content {
+    margin: 0 10%;
+  }
+
+  .navigation-bar {
+    position: relative;
+  }
+
+  #navbarSupportedContent {
+    position: absolute;
+    right: 20px;
+  }
+
+  #navbarSupportedContent input {
+    width: 500px;
+  }
+
+  #navbarSupportedContent button {
+    width: 150px;
+  }
+}
+
+.company-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-right: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.company-name {
+  display: inline-block;
+}
+
+.subcribe-btn {
+  position: absolute;
+  right: 20px;
+  width: 150px;
+  margin-top: 10px;
+}
+
+.stock-graph {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-content {
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+}
