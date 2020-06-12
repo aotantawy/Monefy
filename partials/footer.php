@@ -16,6 +16,7 @@
 
 <!-- Template Main JS File -->
 <script src="/stock/assets/js/home/home.js"></script>
-</body>
-
-</html>
+ <!-- Register-->
+ <script src="/stock/register/js/registering.min.js"></script>
+  <!-- news-page-->
+  <script src="/stock/news-page/js/index.js"></script>

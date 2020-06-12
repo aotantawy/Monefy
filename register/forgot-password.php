@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>SB Admin 2 - Forgot Password</title>
-
-  <!-- Custom fonts for this template-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
-  <!-- Custom styles for this template-->
-  <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
-
-</head>
+<?php include "../partials/header.php" ?>
+<?php include "../partials/navbar.php" ?>
 
 <body class="bg-gradient-primary">
-
+</br></br>
   <div class="container">
 
     <!-- Outer Row -->
@@ -42,16 +24,16 @@
                     <div class="form-group">
                       <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                     </div>
-                    <a href="login.html" class="btn btn-primary btn-user btn-block">
+                    <a href="" class="btn btn-primary btn-user btn-block">
                       Reset Password
                     </a>
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
+                    <a class="small" href="register.php">Create an Account!</a>
                   </div>
                   <div class="text-center">
-                    <a class="small" href="login.html">Already have an account? Login!</a>
+                    <a class="small" href="login.php">Already have an account? Login!</a>
                   </div>
                 </div>
               </div>
@@ -64,16 +46,7 @@
     </div>
 
   </div>
-   <!-- Bootstrap core JavaScript-->
-   <script src="assets/vendor/jquery/jquery.min.js"></script>
-   <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
- 
-   <!-- Core plugin JavaScript-->
-   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
- 
-   <!-- Custom scripts for all pages-->
-   <script src="assets/js/sb-admin-2.min.js"></script>
+
 
 </body>
-
-</html>
+<?php include "../partials/footer.php" ?>

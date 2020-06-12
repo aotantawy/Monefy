@@ -22,9 +22,8 @@
 
         </nav><!-- .nav-menu -->
         <div class="header-social-links">
-            <button type="button" onclick="location.href='login.html';" class="btn btn-outline-primary">log in</button>
-            <button type="button" class="btn btn-outline-primary" onclick="location.href='register.html';">sign
-                up</button>
+            <button type="button" onclick="location.href='/stock/register/login.php';" class="btn btn-outline-primary">log in</button>
+            <button type="button" class="btn btn-outline-primary" onclick="location.href='/stock/register/register.php';">sign up</button>
         </div>
     </div>
 </header><!-- End Header -->

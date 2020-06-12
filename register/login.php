@@ -1,27 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Login</title>
-
-  <!-- Custom styles for this template-->
-  <link href="assets/css/register/registering-style.css" rel="stylesheet">
-  <!-- Custom fonts for this template-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
-</head>
+<?php include "../partials/header.php" ?>
+<?php include "../partials/navbar.php" ?>
 
 <body class="bg-gradient-primary">
-
+</br></br>
   <div class="container">
-
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
@@ -49,23 +31,23 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                    <a href="" class="btn btn-primary btn-user btn-block">
                       Login
                     </a>
                     <hr>
-                    <a href="index.html" class="btn btn-google btn-user btn-block">
+                    <a href="" class="btn btn-google btn-user btn-block">
                       <i class="fab fa-google fa-fw"></i> Login with Google
                     </a>
-                    <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                    <a href="" class="btn btn-facebook btn-user btn-block">
                       <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
                     </a>
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                    <a class="small" href="forgot-password.php">Forgot Password?</a>
                   </div>
                   <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
+                    <a class="small" href="register.php">Create an Account!</a>
                   </div>
                 </div>
               </div>
@@ -78,15 +60,5 @@
     </div>
 
   </div>
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="assets/js/vendor/jquery.min.js"></script>
-  <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/vendor/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="assets/js/registering.min.js"></script>
-
 </body>
-
-</html>
+<?php include "../partials/footer.php" ?>
