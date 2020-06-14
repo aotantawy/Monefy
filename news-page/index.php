@@ -5,7 +5,7 @@
 
 <div class="news-page">
     <?php
-    $response = file_get_contents('http://newsapi.org/v2/everything?q=stock&apiKey=' . $News_API . '&language=en&pageSize=100');
+    $response = file_get_contents('http://newsapi.org/v2/everything?q=stock&apiKey=' . $NEWS_API . '&language=en&pageSize=100');
     $response = json_decode($response, true);
 
     $articles = $response["articles"];
