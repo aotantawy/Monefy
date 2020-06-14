@@ -43,4 +43,4 @@
 
 </head>
 
-<body>
+<body style="background-color:#FAF9F9;">
