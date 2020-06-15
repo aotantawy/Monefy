@@ -17,60 +17,83 @@
             <button type="button" class="btn btn-outline-primary mx-3">Visit Website  <i class="fas fa-location-arrow"></i></button>
     </div>
   </div>
-  <div class="container-fluid my-3" style="background-color:#ffffff;width:96%;margin:auto;">
-<div class="row py-5">
-  <div class="col-md-3"style="justify-content:start;">
-    <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-About-list" data-toggle="list" href="#list-About" role="tab" aria-controls="About">About</a>
-      <a class="list-group-item list-group-item-action" id="list-History-list" data-toggle="list" href="#list-History" role="tab" aria-controls="History">History</a>
+<div class="container-fluid my-3" style="background-color:#ffffff;width:96%;margin:auto;">
+  <div class="row py-5">
+    <div class="col-md-3"style="justify-content:start;">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-About-list" data-toggle="list" href="#list-About" role="tab" aria-controls="About"><i class="fas fa-fw fa-about"></i>About</a>
+        <a class="list-group-item list-group-item-action" id="list-History-list" data-toggle="list" href="#list-History" role="tab" aria-controls="History"><i class="fas fa-fw fa-chart-area"></i>History</a>
+        <a class="list-group-item list-group-item-action" id="list-Prediction-list" data-toggle="list" href="#list-Prediction" role="tab" aria-controls="Prediction"><i class="	fab fa-think-peaks"></i>Prediction</a>
+      </div>
     </div>
-  </div>
-  <div class="col-md-9 x">
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="list-About" role="tabpanel" aria-labelledby="list-About-list">
-        <table>
-          <tr>
-            <td>
-              Branch:
-            </td>
-            <td>
-              <ol>
-                <?php
-                  foreach($locations as $location)
+    <div class="col-md-9 x">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-About" role="tabpanel" aria-labelledby="list-About-list">
+          <table>
+            <tr>
+              <td>
+                Branch:
+              </td>
+              <td>
+                <ol>
+                  <?php
+                    foreach($locations as $location)
+                    {
+                      echo "<li>".$location['name']."</li>";
+                    } 
+                  ?> 
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td>Industry:</td>
+              <td>
+                <ol>
+                  <?php
+                  foreach($industries as $industry)
                   {
-                    echo "<li>".$location['name']."</li>";
-                  } 
-                ?> 
-              </ol>
-            </td>
-          </tr>
-          <tr>
-            <td>Industry:</td>
-            <td>
-              <ol>
-                <?php
-                foreach($industries as $industry)
-                {
-                  echo "<li>".$industry['name']."</li>";
-                }
-                ?>
-              </ol>
-            </td>
-          </tr>
-          <tr>
-            <td>Size of Company:</td>
-            <td class="text-center"><?php echo $sizeOfCompany?></td>
-          </tr>
-        </table>
+                    echo "<li>".$industry['name']."</li>";
+                  }
+                  ?>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td>Size of Company:</td>
+              <td class="text-center"><?php echo $sizeOfCompany?></td>
+            </tr>
+          </table>
 
-      </div>
-      <div class="tab-pane fade show" id="list-History" role="tabpanel" aria-labelledby="list-History-list">
-      .......
+        </div>
+        <div class="tab-pane fade show" id="list-History" role="tabpanel" aria-labelledby="list-History-list">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">History Chart</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-area">
+                      <canvas id="HistoryChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+        </div>
+        <div class="tab-pane fade show" id="list-Prediction" role="tabpanel" aria-labelledby="list-Prediction-list">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Prediction Chart</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="PredictionChart"></canvas>
+                  </div>
+                </div>
+              </div>
+        </div>  
       </div>
     </div>
   </div>
 </div>
-</div>
+
   <div class="card-img-top">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
