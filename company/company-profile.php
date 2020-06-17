@@ -3,11 +3,12 @@
 <?php include "company-structure.php" ?>
 <br><br>
 <div class="aboutCompany" style="background-color:#ffffff">
+<hr>
     <div class="logo mx-5">
       <img src="<?php echo $logoImage?>" alt="<?php echo $nameOfCompany ?>+ image" class="float-left company-image" >
     </div>
     <br>
-    <div class="description mx-5 my-3">
+    <div class="mx-5 my-3">
         <h5 class="card-title"><?php echo $nameOfCompany?></h5>
         <p class="card-text"><?php echo $desciption?></p>
         <p class="card-text"><small class="text-muted"><?php echo $publication_date?></small></p>
@@ -72,7 +73,8 @@
                   </div>
                   <div class="card-body">
                     <div class="chart-area">
-                      <canvas id="HistoryChart"></canvas>
+                      <canvas id="HistoryChart" width="50" height="20"></canvas>
+                        <script src="js/HistoryChart.js"></script>
                     </div>
                   </div>
                 </div>
@@ -84,7 +86,8 @@
                 </div>
                 <div class="card-body">
                   <div class="chart-area">
-                    <canvas id="PredictionChart"></canvas>
+                    <canvas id="PredictionChart" width="50" height="20"></canvas>
+                      <script src="js/PredictionChart.js"></script>
                   </div>
                 </div>
               </div>

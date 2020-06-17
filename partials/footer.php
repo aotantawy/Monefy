@@ -22,5 +22,4 @@
 <script src="/stock/news-page/js/index.js"></script>
 
 </body>
-
 </html>
