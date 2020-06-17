@@ -73,7 +73,8 @@
                   </div>
                   <div class="card-body">
                     <div class="chart-area">
-                      <canvas id="HistoryChart"></canvas>
+                      <canvas id="HistoryChart" width="50" height="20"></canvas>
+                        <script src="js/HistoryChart.js"></script>
                     </div>
                   </div>
                 </div>
@@ -85,7 +86,8 @@
                 </div>
                 <div class="card-body">
                   <div class="chart-area">
-                    <canvas id="PredictionChart"></canvas>
+                    <canvas id="PredictionChart" width="50" height="20"></canvas>
+                      <script src="js/PredictionChart.js"></script>
                   </div>
                 </div>
               </div>

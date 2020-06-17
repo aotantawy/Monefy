@@ -40,7 +40,9 @@
     <!-- Template Main CSS File -->
     <link href="/stock/assets/css/home/home-style.css" rel="stylesheet">
     <link href="/stock/assets/css/navbar-style.css" rel="stylesheet">
-
+    
+    <!-- Chart Js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 </head>
 

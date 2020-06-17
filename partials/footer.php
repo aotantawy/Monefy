@@ -20,3 +20,5 @@
  <script src="/stock/register/js/registering.min.js"></script>
   <!-- news-page-->
   <script src="/stock/news-page/js/index.js"></script>
+  </body>
+</html>
