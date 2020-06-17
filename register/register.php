@@ -34,18 +34,30 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
                 </div>
+               
+                <select>
+                  <?php
+                  include "CountryModel.php";
+
+                  foreach($countries as $key => $value) {
+                  ?>
+                  <option value="<?= $key ?>" title="<?= htmlspecialchars($value)?>" >
+
+ <!--icon for flag but option include text only, if you can resolve it, for example:you can Compensate for (eg) by any key of country !-->
+                  <div class="flag flag-eg"></div>
+
+                   <?=htmlspecialchars($value)?>
+                   
+                  </option>
+                  <?php
+                  }
+                  ?>
+                </select>
+                <hr>
                 <a href="" class="btn btn-primary btn-user btn-block">
                   Register Account
                 </a>
-                <hr>
-                <a href="" class="btn btn-google btn-user btn-block">
-                  <i class="fab fa-google fa-fw"></i> Register with Google
-                </a>
-                <a href="" class="btn btn-facebook btn-user btn-block">
-                  <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                </a>
               </form>
-              <hr>
               <div class="text-center">
                 <a class="small" href="forgot-password.php">Forgot Password?</a>
               </div>
@@ -60,6 +72,6 @@
 
   </div>
 </body>
-<?php include "../partials/footer.php" ?>
+<?php require "../partials/footer.php" ?>
 
 

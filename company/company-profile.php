@@ -3,11 +3,12 @@
 <?php include "company-structure.php" ?>
 <br><br>
 <div class="aboutCompany" style="background-color:#ffffff">
+<hr>
     <div class="logo mx-5">
       <img src="<?php echo $logoImage?>" alt="<?php echo $nameOfCompany ?>+ image" class="float-left company-image" >
     </div>
     <br>
-    <div class="description mx-5 my-3">
+    <div class="mx-5 my-3">
         <h5 class="card-title"><?php echo $nameOfCompany?></h5>
         <p class="card-text"><?php echo $desciption?></p>
         <p class="card-text"><small class="text-muted"><?php echo $publication_date?></small></p>
