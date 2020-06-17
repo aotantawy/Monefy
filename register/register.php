@@ -34,26 +34,32 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
                 </div>
-               
-                <select>
-                  <?php
-                  include "CountryModel.php";
+               <div class="row">
+                  <div class="col-sm-2">
+                      <p>       Country:</p>
+                  </div>
+                  <div>
+                    <select style="border:1px solid black;">
+                      <?php
+                        include "CountryModel.php";
 
-                  foreach($countries as $key => $value) {
-                  ?>
-                  <option value="<?= $key ?>" title="<?= htmlspecialchars($value)?>" >
+                        foreach($countries as $key => $value) {
+                      ?>
+                      <option value="<?= $key ?>" title="<?= htmlspecialchars($value)?>" >
 
- <!--icon for flag but option include text only, if you can resolve it, for example:you can Compensate for (eg) by any key of country !-->
-                  <div class="flag flag-eg"></div>
+    <!--icon for flag but option include text only, if you can resolve it, for example:you can Compensate for (eg) by any key of country !-->
+                      <div class="flag flag-eg"></div>
 
-                   <?=htmlspecialchars($value)?>
-                   
-                  </option>
-                  <?php
-                  }
-                  ?>
-                </select>
-                <hr>
+                      <?=htmlspecialchars($value)?>
+                      
+                      </option>
+                      <?php
+                      }
+                      ?>
+                    </select>
+                  </div>
+                </div>
+                </br>
                 <a href="" class="btn btn-primary btn-user btn-block">
                   Register Account
                 </a>
