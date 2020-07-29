@@ -1,14 +1,15 @@
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
-    <div class="container d-flex">
-
+    <div class="container-fluid d-flex">
         <div class="logo mr-auto">
-            <h1 class="text-light"><a href="/stock/client/"><span>Stock</span></a></h1>
+            <h1 class="text-light">
+                <a href="/"><span>Stock</span></a>
+            </h1>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li class="nav-item"><a href="/stock/client/">Home</a></li>
+                <li class="nav-item"><a href="/">Home</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -16,31 +17,42 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="./trend/index.html?type=local">Local Trend</a>
-                        <a class="dropdown-item" href="./trend/index.html?type=global">Global Trend </a>
+                        <a class="dropdown-item" href="./trend/index.html?type=global">Global Trend
+                        </a>
+                        <a class="dropdown-item" href="./trend/index.html?type=local">Watch List</a>
                     </div>
                 </li>
-                <li><a href="./news-page/">News</a></li>
-                <li><a href="./company/company-profile.html">Company</a></li>
+                <li><a href="/news">News</a></li>
+                <li>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Company search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i
+                                class="fas fa-search"></i></button>
+                    </form>
+                </li>
 
-            </ul>
+                <% if (signedUser){%>
+                <li><a href="#">Username: <%= userName%></a></li>
 
-        </nav><!-- .nav-menu -->
+                <%}%>
+      </ul>
+    </nav>
+    <!-- .nav-menu -->
 
-        <div class="header-social-links">
-            <button type="button" onclick="location.href='./register/login.html';" class="btn btn-outline-primary">log
-                in</button>
-            <button type="button" class="btn btn-outline-primary"
-                onclick="location.href='./register/register.html';">sign
-                up</button>
-        </div>
-
-        <!-- if the user is logged in hash the previous block and activate this block
-      <div class="form-inline">
-          <p class="font-weight-bold font-italic"><small class="text-success">User Name</small></p>
-          <i class="fas fa-user"></i>
-      </div>
-      -->
-
+    <div class="header-social-links">
+      <% if (signedUser){%>
+                <button type="button" class="btn btn-outline-primary" onclick="location.href='/log-out';">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+                <%} else {%>
+                <button type="button" onclick="location.href='/sign-in';" class="btn btn-outline-primary">
+                    Sign In
+                </button>
+                <button type="button" class="btn btn-outline-primary" onclick="location.href='/sign-up';">
+                    Sign Up
+                </button>
+                <%}%>
     </div>
+  </div>
 </header>
 <!-- End Header -->

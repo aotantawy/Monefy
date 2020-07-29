@@ -18,6 +18,8 @@ mongoose.connect("mongodb://localhost:27017/stock", {
 
 app.use("/", require("./routes/index"));
 app.use("/sign-up", require("./routes/sign-up"));
+app.use("/sign-in", require("./routes/sign-in"));
+app.use("/log-out", require("./routes/log-out"));
 app.use("/news", require("./routes/news"));
 
 app.listen(8080, () => console.log("server start working on port 8080"));

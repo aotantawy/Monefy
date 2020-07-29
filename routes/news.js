@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 const User = require("./../model/user");
-const { Console } = require("console");
 
 router.get("/", async (req, res) => {
   try {
@@ -12,7 +11,6 @@ router.get("/", async (req, res) => {
     const signedUser = await User.findOne({
       userName: req.cookies.userCookies,
     });
-    //console.log(signedUser.coutnry);
 
     const allNews = await axios.get(
       "https://newsapi.org/v2/top-headlines?country=" +
@@ -22,10 +20,10 @@ router.get("/", async (req, res) => {
         "&category=business&pageSize=100"
     );
 
-    console.log(allNews.data);
-
     res.render("news.ejs", {
       title: "news - Stock Prediction",
+      signedUser: true,
+      userName: req.cookies.userCookies,
       allNews: allNews.data.articles,
     });
   } catch (err) {
