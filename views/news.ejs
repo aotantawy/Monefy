@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+
+<div class="news-page">
+
+    <%allNews.forEach(news=>{%>
+    <div class="card article-container">
+        <div class="card-body ">
+            <h5 class="card-title main-heading"><%= news.title%></h5>
+            <div class="article-meta">
+                <h6 class="card-subtitle mb-2 text-muted subtitle"> <%= news.source.name%> </h6>
+                <h6 class="card-subtitle mb-2 text-muted subtitle">| <i class="far fa-clock"></i>
+                    <%=(news.publishedAt+"").replace("T"," ").replace("Z"," ")%></h6>
+            </div>
+            <div class="article-image">
+                <img src=<%=news.urlToImage+""%> alt="BBC Image" class="rounded">
+            </div>
+            <div class="card-text">
+                <p class="article-description"><%= (news.description+"").substring(0,150) %></p>
+                <a href=<%= news.url+""%> class="card-link"> See More</a>
+            </div>
+        </div>
+    </div>
+    <%})%>
+
+</div>
+
+
+<%- include('partials/footer') %>
