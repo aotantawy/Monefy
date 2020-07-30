@@ -28,6 +28,7 @@ router.post("/", async (req, res) => {
     });
     res.redirect("/news");
   } catch (err) {
+    res.redirect("/sign-in")
     console.log(err);
   }
 });

@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+
+<div class="news-page">
+
+    <%searchResult.forEach(item=>{%>
+    <div class="card article-container">
+        <div class="card-body ">
+            <h5 class="card-title main-heading"><a href=<%= item.formattedUrl+""%> target="_blank" class="card-link">
+                    <%= item.title%></a></h5>
+            <div class="article-meta">
+                <h6 class="card-subtitle mb-2 text-muted subtitle"> <%= item.displayLink%> </h6>
+            </div>
+            <div class="card-text">
+                <p class="article-description"><%= item.snippet %></p>
+            </div>
+        </div>
+    </div>
+    <%})%>
+
+</div>
+
+
+<%- include('partials/footer') %>

@@ -27,6 +27,7 @@ router.get("/", async (req, res) => {
       allNews: allNews.data.articles,
     });
   } catch (err) {
+    res.redirect("/sign-in");
     console.log(err);
   }
 });

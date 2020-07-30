@@ -10,7 +10,7 @@ const companySchema = {
     required: true,
     unique: true,
   },
-  companyDescription: {
+  sector: {
     type: String,
     required: true,
   },
@@ -27,6 +27,14 @@ const companySchema = {
     required: true,
   },
   webSite: {
+    type: String,
+    required: true,
+  },
+  CEO: {
+    type: String,
+    required: true,
+  },
+  CEOTitle: {
     type: String,
     required: true,
   },

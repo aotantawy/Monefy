@@ -21,5 +21,6 @@ app.use("/sign-up", require("./routes/sign-up"));
 app.use("/sign-in", require("./routes/sign-in"));
 app.use("/log-out", require("./routes/log-out"));
 app.use("/news", require("./routes/news"));
+app.use("/search", require("./routes/search"));
 
 app.listen(8080, () => console.log("server start working on port 8080"));

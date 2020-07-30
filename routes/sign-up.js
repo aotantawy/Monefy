@@ -36,6 +36,7 @@ router.post("/", async (req, res) => {
     });
     res.redirect("/news");
   } catch (err) {
+    res.redirect("/sign-up");
     console.log(err);
   }
 });
