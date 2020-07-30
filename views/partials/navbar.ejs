@@ -24,8 +24,8 @@
                 </li>
                 <li><a href="/news">News</a></li>
                 <li>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Company search">
+                    <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Company search" name="query">
                         <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i
                                 class="fas fa-search"></i></button>
                     </form>
@@ -45,7 +45,7 @@
                     <i class="fas fa-sign-out-alt"></i>
                 </button>
                 <%} else {%>
-                <button type="button" onclick="location.href='/sign-in';" class="btn btn-outline-primary">
+                <button type="button" onclick="location.href='/sign-in';" class="btn btn-outline-primary ml-3">
                     Sign In
                 </button>
                 <button type="button" class="btn btn-outline-primary" onclick="location.href='/sign-up';">

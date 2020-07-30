@@ -22,6 +22,14 @@ const userSchema = {
     type: String,
     required: true,
   },
+  subscriptionList: [
+    {
+      companyID: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
 };
 
 module.exports = User = mongoose.model("User", userSchema);
