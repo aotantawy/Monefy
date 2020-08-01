@@ -17,6 +17,8 @@ router.get("/", (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
+    res.clearCookie("userCookies");
+
     const NotexsitedUser = await User.findOne({ userName: req.body.userName });
     if (NotexsitedUser) throw "this user existed ";
 

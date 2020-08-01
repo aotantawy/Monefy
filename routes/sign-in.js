@@ -17,6 +17,7 @@ router.get("/", (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
+    res.clearCookie("userCookies");
     const NotexsitedUser = await User.findOne({
       userName: req.body.userName,
       password: req.body.password,
@@ -28,7 +29,7 @@ router.post("/", async (req, res) => {
     });
     res.redirect("/news");
   } catch (err) {
-    res.redirect("/sign-in")
+    res.redirect("/sign-in");
     console.log(err);
   }
 });

@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+
+<div class="news-page">
+
+    <%companies.forEach(company=>{%>
+    <div class="card article-container">
+        <div class="card-body ">
+            <h5 class="card-title main-heading"><a href=<%= ("/company/"+company._id)%>><%= company.companyName %></a>
+            </h5>
+            <div class="article-image">
+                <img src=<%=company.srcImg+""%> alt="BBC Image" class="rounded">
+            </div>
+            <div class="card-text">
+                <p class="article-description"><%= company.sector%> • <%= company.industry%></p>
+                <br>
+                <a href=<%= company.webSite+""%> target="_blank" class="card-link">
+                    <%= "Website: "+company.webSite.slice(company.webSite.search("www.")+4)%></a>
+            </div>
+        </div>
+    </div>
+    <%})%>
+
+</div>
+
+
+<%- include('partials/footer') %>
