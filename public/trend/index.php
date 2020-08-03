@@ -1,6 +1,6 @@
-<?php include "./../partials/header.php" ?>
-<?php include "./../partials/navbar.php" ?>
-
+<html>
+<head></head>
+<body>
 <section class="container trend">
     <h1 class="heading">Local/Global Trending</h1>
     <table class="table">
@@ -37,7 +37,6 @@
             </tr>
         </tbody>
     </table>
-
 </section>
-
-<?php include "./../partials/footer.php" ?>
+</body>
+</html>
