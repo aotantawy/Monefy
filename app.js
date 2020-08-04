@@ -25,5 +25,6 @@ app.use("/search", require("./routes/search"));
 app.use("/companies", require("./routes/companies-list"));
 app.use("/company-profile", require("./routes/company-profile"));
 app.use("/watch-list", require("./routes/watch-list"));
+app.use("/company-data", require("./routes/company-data"));
 
 app.listen(8080, () => console.log("server start working on port 8080"));

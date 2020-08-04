@@ -1,28 +1,35 @@
-
 window.onload = function () {
-  var ctx = document.getElementById("HistoryChart").getContext("2d");
-  var myChart = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-      datasets: [
-        {
-          label: "# of Votes",
-          data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 2,
-        },
-      ],
-    },
-    options: {
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
+  const ctx = document.getElementById("HistoryChart").getContext("2d");
+  const symbol = document.getElementById("companySymbol").value;
+  axios
+    .get("http://localhost:8080/company-data?symbol=" + symbol)
+    .then(function (res) {
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: res.data.time,
+          datasets: [
+            {
+              label: "Stock data points",
+              data: res.data.close,
+              borderWidth: 2,
             },
+          ],
+        },
+        options: {
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
           },
-        ],
-      },
-    },
-  });
+        },
+      });
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
 };
