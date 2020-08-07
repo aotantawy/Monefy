@@ -2,7 +2,7 @@ window.onload = function () {
   const ctx = document.getElementById("HistoryChart").getContext("2d");
   const symbol = document.getElementById("companySymbol").value;
   axios
-    .get("http://localhost:8080/company-data?symbol=" + symbol)
+    .get("http://localhost:8080/company-data/history?symbol=" + symbol)
     .then(function (res) {
       new Chart(ctx, {
         type: "line",
