@@ -38,10 +38,9 @@
                                         <label for="inputState">Resident country: </label>
                                         <select id="inputState" class="form-control" name="country">
                                             <option selected value="">Choose...</option>
-                                            <option value="eg">Egypt</option>
-                                            <option value="us">United States of America</option>
-                                            <option value="gb">United Kingdom</option>
-                                            <option value="de">Germany</option>
+                                            <% countryCodeMapper.forEach(function(country){%>
+                                            <option value=<%=country.Code%>><%=country.Name%></option>
+                                            <%})%>
                                         </select>
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-user btn-block">

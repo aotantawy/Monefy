@@ -2,6 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
+const countryCodeMapper = require("./../utilities/country-code");
 const User = require("./../model/user");
 
 router.get("/", (req, res) => {
@@ -12,6 +13,7 @@ router.get("/", (req, res) => {
     title: "Sign up - Stock Prediction",
     signedUser: false,
     userName: "",
+    countryCodeMapper,
   });
 });
 
