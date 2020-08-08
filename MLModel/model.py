@@ -1,14 +1,15 @@
 
 import keras
 import json
+import sys
 import pandas as pd
 import numpy as np
 # args
 
 
-def load_model():
+def load_model(file):
     regressor = keras.models.load_model(
-        '/home/ahmedosama/workspace/stock/MLModel/prediction-lstm.h5')
+        f'/home/ahmedosama/workspace/stock/MLModel/{file}.h5')
     return regressor
 
 
@@ -17,7 +18,7 @@ def predict(regressor):
         '/home/ahmedosama/workspace/stock/MLModel/daily_AAPL.csv')
     real_stock_price = dataset_test.iloc[:, 1:2].values
 
-    #return dates to be printed
+    # return dates to be printed
     time = list(dataset_test["timestamp"][0:17])
 
     from sklearn.preprocessing import MinMaxScaler
@@ -32,23 +33,23 @@ def predict(regressor):
 
     predicted_stock_price = regressor.predict(X_test)
     predicted_stock_price = sc.inverse_transform(predicted_stock_price)
-    return predicted_stock_price , time
+    return predicted_stock_price, time
 
 
 def main():
-    modelpred = load_model()
-    resultlist,time = predict(modelpred)
+    modelpred = load_model(sys.argv[1])
+    resultlist, time = predict(modelpred)
     resultlist = resultlist[0:17].tolist()
 
     final_result = []
 
     for row in resultlist:
-     for elem in row:
-        final_result.append(elem)
+        for elem in row:
+            final_result.append(elem)
 
+    print(json.dumps({"close": final_result,
+                      "time": time}))
 
-    print(json.dumps({"close":final_result,"time":time}))
-    
 
 if __name__ == "__main__":
     main()
