@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+
+<div class="news-page">
+
+    <%companies.forEach(company=>{%>
+    <div class="card article-container">
+        <div class="card-body ">
+            <h5 class="card-title main-heading"><a
+                    href=<%= ("/company-profile?companyID="+company._id)%>><%= company.companyName %></a>
+            </h5>
+            <div class="article-image indicator">
+                <p class=<%= company.rank>=0?"indicator-color-green":"indicator-color-red"%>>
+                    <%if(company.rank>=0){%>
+                    <i class="fas fa-arrow-up"></i>
+                    <%}else{%>
+                    <i class="fas fa-arrow-down"></i>
+                    <%}%>
+                    <%= Number(Math.abs(company.rank)).toFixed(3)%>
+                </p>
+            </div>
+            <div class="card-text">
+                <p class="article-description"><%= company.sector%> • <%= company.industry%></p>
+                <br>
+                <a href=<%= company.webSite+""%> target="_blank" class="card-link">
+                    <%= "Website: "+company.webSite.slice(company.webSite.search("www.")+4)%></a>
+            </div>
+        </div>
+    </div>
+    <%})%>
+
+</div>
+
+
+<%- include('partials/footer') %>

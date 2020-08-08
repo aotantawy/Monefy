@@ -45,3 +45,18 @@
 .article-description {
   display: inline;
 }
+.indicator {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.indicator-color-red {
+  color: red;
+}
+
+.indicator-color-green {
+  color: green;
+}

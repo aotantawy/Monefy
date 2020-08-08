@@ -27,5 +27,6 @@ app.use("/company-profile", require("./routes/company-profile"));
 app.use("/watch-list", require("./routes/watch-list"));
 app.use("/history", require("./routes/history-data"));
 app.use("/prediction", require("./routes/prediction-data"));
+app.use("/top-trend", require("./routes/trend"));
 
 app.listen(8080, () => console.log("server start working on port 8080"));
