@@ -10,6 +10,7 @@ router.get("/", async (req, res) => {
       "/home/ahmedosama/workspace/stock/MLModel/model.py",
       req.query.symbol,
     ]);
+    
     await python.stdout.on("data", function (data) {
       const dataToJson = JSON.parse(data.toString());
       dataToJson.time = dataToJson.time.reverse();

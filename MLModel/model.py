@@ -13,9 +13,9 @@ def load_model(file):
     return regressor
 
 
-def predict(regressor):
+def predict(regressor,data_file):
     dataset_test = pd.read_csv(
-        '/home/ahmedosama/workspace/stock/MLModel/daily_AAPL.csv')
+        f'/home/ahmedosama/workspace/stock/MLModel/daily_{data_file}.csv')
     real_stock_price = dataset_test.iloc[:, 1:2].values
 
     # return dates to be printed
@@ -38,7 +38,7 @@ def predict(regressor):
 
 def main():
     modelpred = load_model(sys.argv[1])
-    resultlist, time = predict(modelpred)
+    resultlist, time = predict(modelpred,sys.argv[1])
     resultlist = resultlist[0:17].tolist()
 
     final_result = []
