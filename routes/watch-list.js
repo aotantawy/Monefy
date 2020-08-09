@@ -17,7 +17,10 @@ router.get("/", async (req, res) => {
       return { _id: item };
     });
 
-    const companies = await Company.find({ $or: companiesQueryList });
+    const companies = undefined;
+
+    if (companiesQueryList.lenght > 0)
+      companies = await Company.find({ $or: companiesQueryList });
 
     res.render("companies-list.ejs", {
       title: "Watch List - Stock Prediction",

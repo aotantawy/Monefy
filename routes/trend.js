@@ -40,7 +40,7 @@ async function rankCompany(symbol) {
 }
 
 function sortRankedList(rankedList) {
-  return rankedList.sort((a, b) => (a.symbol > b.symbol ? 1 : -1));
+  return rankedList.sort((a, b) => (a.rank > b.rank ? -1 : 1));
 }
 router.get("/", async (req, res) => {
   try {

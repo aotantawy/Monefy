@@ -4,7 +4,10 @@
 
 <div class="news-page">
 
-    <%allNews.forEach(news=>{%>
+    <%if(!allNews){%>
+    <p class="message">No Result Found</p>
+    <%}%>
+    <%allNews && allNews.forEach(news=>{%>
     <div class="card article-container">
         <div class="card-body ">
             <h5 class="card-title main-heading"><%= news.title%></h5>

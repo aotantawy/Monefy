@@ -4,7 +4,10 @@
 
 <div class="news-page">
 
-    <%searchResult.forEach(item=>{%>
+    <%if(!searchResult){%>
+    <p class="message">No Result Found</p>
+    <%}%>
+    <%searchResult && searchResult.forEach(item=>{%>
     <div class="card article-container">
         <div class="card-body ">
             <h5 class="card-title main-heading"><a href=<%= item.formattedUrl+""%> target="_blank" class="card-link">
