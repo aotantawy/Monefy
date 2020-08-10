@@ -17,9 +17,9 @@ router.get("/", async (req, res) => {
       return { _id: item };
     });
 
-    const companies = undefined;
+    let companies = [];
 
-    if (companiesQueryList.lenght > 0)
+    if (companiesQueryList.length > 0)
       companies = await Company.find({ $or: companiesQueryList });
 
     res.render("companies-list.ejs", {

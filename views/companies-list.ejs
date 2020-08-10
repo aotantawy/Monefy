@@ -4,10 +4,7 @@
 
 <div class="news-page">
 
-    <%if(!companies){%>
-    <p class="message">No Companies Found</p>
-    <%}%>
-    <%companies && companies.forEach(company=>{%>
+    <%companies.forEach(company=>{%>
     <div class="card article-container">
         <div class="card-body ">
             <h5 class="card-title main-heading"><a
