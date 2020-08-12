@@ -3,12 +3,10 @@ const spawn = require("child_process").spawn;
 const router = express.Router();
 const trendingSymbols = require("./../utilities/trending-symbols");
 const Company = require("./../model/company");
-const { resolve } = require("path");
-const { rejects } = require("assert");
 
 function getPythonData(symbol) {
   const python = spawn("python", [
-    "/home/ahmedosama/workspace/stock/MLModel/model.py",
+    "/home/ahmedosama/workspace/stock/MLModel/lstm.py",
     symbol,
   ]);
 

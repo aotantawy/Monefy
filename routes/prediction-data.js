@@ -7,10 +7,10 @@ router.get("/", async (req, res) => {
     if (!req.cookies.userCookies) res.redirect("/sign-in");
 
     const python = spawn("python", [
-      "/home/ahmedosama/workspace/stock/MLModel/model.py",
+      "/home/ahmedosama/workspace/stock/MLModel/lstm.py",
       req.query.symbol,
     ]);
-    
+
     await python.stdout.on("data", function (data) {
       const dataToJson = JSON.parse(data.toString());
       dataToJson.time = dataToJson.time.reverse();
