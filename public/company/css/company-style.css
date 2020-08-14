@@ -77,3 +77,8 @@ body {
   height: 520px;
   padding: 10px;
 }
+
+.company-indicator{
+  right: 5px;
+  top: 5px;
+}

@@ -33,6 +33,13 @@ document
             },
           },
         });
+        if (res.data.rank >= 0) {
+          document.getElementById("arrow").innerHTML =
+            '<i class="fas fa-arrow-up indicator indicator-color-green company-indicator"></i>';
+        } else {
+          document.getElementById("arrow").innerHTML =
+            '<i class="fas fa-arrow-down indicator indicator-color-red company-indicator"></i>';
+        }
       })
       .catch(function (err) {
         console.log(err);
